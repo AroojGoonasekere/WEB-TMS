@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Kandy Traffic Management System</title>
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kandy Traffic</div>
+      <ul class="nav-links">
+        <li><a href="home.php">Home</a></li>
+        <li><a href="map.html">Live Map</a></li>
+        <li><a href="routes.html">Routes</a></li>
+        <li><a href="analytics.php">Analytics</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="profile-dropdown">
+        <i class="fas fa-user-circle"></i>
+        <div class="dropdown-content">
+          <a href="views/login.html">Login / Signup</a>
+          <a href="views/profile.html">My Account</a>
+          <a href="views/settings.html">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, suggestions, or need support, feel free to reach out.</p>
+    
+    <form id="contactForm" method="POST" action="php/submit_contact.php">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Kandy Traffic Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

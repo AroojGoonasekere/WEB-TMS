@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="../assets/css/profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-card">
+      <div class="profile-avatar">
+        <img id="avatar-img" src="https://i.pravatar.cc/150?img=3" alt="User Avatar" />
+        <input type="file" id="avatar-upload" accept="image/*" hidden />
+        <button id="upload-btn">Change Avatar</button>
+      </div>
+      <div class="profile-info">
+        <h2 id="profile-name">John Doe</h2>
+        <p id="profile-email">john.doe@example.com</p>
+        <p id="profile-bio">Web developer, coffee lover, and tech enthusiast.</p>
+      </div>
+      <button id="edit-btn">Edit Profile</button>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="edit-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h3>Edit Profile</h3>
+        <form id="edit-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+
+          <label for="bio">Bio</label>
+          <textarea id="bio" rows="3" maxlength="150"></textarea>
+
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/profile.js"></script>
+</body>
+</html>

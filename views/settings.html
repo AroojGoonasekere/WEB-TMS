@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Settings</title>
+  <link rel="stylesheet" href="../assets/css/settings.css" />
+</head>
+<body>
+  <div class="settings-container">
+    <h1>Settings</h1>
+    <form id="settings-form">
+      <section>
+        <h2>Account Preferences</h2>
+        <label>
+          <input type="checkbox" id="email-notifications" />
+          Enable Email Notifications
+        </label>
+        <label>
+          <input type="checkbox" id="sms-notifications" />
+          Enable SMS Notifications
+        </label>
+      </section>
+
+      <section>
+        <h2>Privacy</h2>
+        <label>
+          <input type="checkbox" id="profile-visible" />
+          Make my profile public
+        </label>
+        <label>
+          <input type="checkbox" id="show-online-status" />
+          Show my online status
+        </label>
+      </section>
+
+      <section>
+        <h2>Theme</h2>
+        <label>
+          <input type="radio" name="theme" value="light" checked />
+          Light
+        </label>
+        <label>
+          <input type="radio" name="theme" value="dark" />
+          Dark
+        </label>
+      </section>
+
+      <button type="submit">Save Settings</button>
+    </form>
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="../assets/js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Incident | Kandy Traffic</title>
+  <link rel="stylesheet" href="../assets/css/incident.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="Logof.jpg" alt="Kandy Traffic Logo">
+        <span>Kandy TrafficMS</span>
+      </div>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="home.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="map.html"><i class="fas fa-map-marked-alt"></i> Live Map</a></li>
+        <li><a href="routes.html"><i class="fas fa-route"></i> Routes</a></li>
+        <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="contact.html" ><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      
+      <div class="user-actions">
+        <div class="user-dropdown">
+          <button class="user-btn">
+            <i class="fas fa-user-circle"></i>
+            <span id="usernameDisplay">Guest</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login/Signup</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+  <div class="incident-container">
+    <h1><i class="fas fa-exclamation-triangle"></i> Report Traffic Incident</h1>
+    
+    <div class="incident-form">
+      <div class="form-section">
+        <label>Incident Type</label>
+        <div class="incident-types">
+          <div class="incident-type selected" data-type="accident">
+            <i class="fas fa-car-crash"></i>
+            <span>Accident</span>
+          </div>
+          <div class="incident-type" data-type="congestion">
+            <i class="fas fa-traffic-light"></i>
+            <span>Congestion</span>
+          </div>
+          <div class="incident-type" data-type="hazard">
+            <i class="fas fa-road"></i>
+            <span>Road Hazard</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label for="location">Location</label>
+        <div class="location-input">
+          <input type="text" id="location" placeholder="Select on map or enter address">
+          <button class="map-btn"><i class="fas fa-map-marker-alt"></i></button>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label for="severity">Severity Level</label>
+        <div class="severity-levels">
+          <div class="severity low" data-level="low">Low</div>
+          <div class="severity medium" data-level="medium">Medium</div>
+          <div class="severity high" data-level="high">High</div>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Provide details about the incident"></textarea>
+      </div>
+      
+      <div class="form-section">
+        <label>Upload Photos (Optional)</label>
+        <div class="image-upload">
+          <div class="upload-box">
+            <i class="fas fa-camera"></i>
+            <span>Click to upload</span>
+            <input type="file" accept="image/*" multiple>
+          </div>
+        </div>
+      </div>
+      
+      <button class="submit-btn">Submit Report</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="BGIM-5.jpg" alt="Kandy Traffic Logo">
+          <span>Kandy Traffic Management System</span>
+        </div>
+        <div class="footer-links">
+          <div class="links-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="map.html">Live Map</a></li>
+              <li><a href="routes.html">Route Planner</a></li>
+            </ul>
+          </div>
+          <div class="links-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="links-column">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Kandy Traffic Management System. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/incident.js"></script>
+</body>
+</html>

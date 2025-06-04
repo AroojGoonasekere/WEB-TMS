@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historical Data | Kandy Traffic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/historical.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="historical-container">
+    <h1><i class="fas fa-history"></i> Traffic Historical Data</h1>
+    
+    <div class="data-controls">
+      
+      <div class="date-range">
+        <label>Date Range</label>
+        <div class="range-inputs">
+          <input type="date" class="start-date">
+          <span>to</span>
+          <input type="date" class="end-date">
+        </div>
+      </div>
+      
+      <div class="location-filter">
+        <label>Location</label>
+        <select>
+          <option>All Locations</option>
+          <option>Temple Area</option>
+          <option>Lake Circle</option>
+          <option>Railway Station</option>
+        </select>
+      </div>
+      
+      <button class="apply-btn">Apply Filters</button>
+    </div>
+    
+    <div class="data-visualization">
+      <div class="chart-container">
+        <canvas id="trafficTrendChart"></canvas>
+      </div>
+      
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Avg. Speed</th>
+              <th>Volume</th>
+              <th>Congestion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-11-15</td>
+              <td>Temple Area</td>
+              <td>12 km/h</td>
+              <td>1,240</td>
+              <td class="high">High</td>
+            </tr>
+            <tr>
+              <td>2023-11-14</td>
+              <td>Lake Circle</td>
+              <td>25 km/h</td>
+              <td>850</td>
+              <td class="medium">Medium</td>
+            </tr>
+            <tr>
+              <td>2023-11-13</td>
+              <td>Railway Station</td>
+              <td>32 km/h</td>
+              <td>620</td>
+              <td class="low">Low</td>
+            </tr>
+            <tr>
+              <td>2023-11-12</td>
+              <td>Temple Area</td>
+              <td>15 km/h</td>
+              <td>1,100</td>
+              <td class="medium">Medium</td>
+            </tr>
+            <tr>
+              <td>2023-11-11</td>
+              <td>Lake Circle</td>
+              <td>28 km/h</td>
+              <td>720</td>
+              <td class="low">Low</td>
+            </tr>
+            <tr>
+              <td>2023-11-10</td>
+              <td>Railway Station</td>
+              <td>35 km/h</td>
+              <td>580</td>
+              <td class="low">Low</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="export-options">
+      <button class="export-btn"><i class="fas fa-file-csv"></i> Export as CSV</button>
+      <button class="export-btn"><i class="fas fa-file-pdf"></i> Export as PDF</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/historical.js"></script>
+</body>
+</html>

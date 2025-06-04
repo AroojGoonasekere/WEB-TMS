@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandy Traffic Analytics Reports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/reports.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/kandy-logo.png" alt="Kandy City Logo" class="city-logo">
+                <h2>Kandy Traffic Control</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="admin.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Live Traffic Map</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="historical.html">
+                            <i class="fas fa-history"></i>
+                            <span>Historical Data</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="incident.html">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Incident Reports</span>
+                            <span class="notification-badge">3</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="reports.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>System Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="weather-widget">
+                    <div class="weather-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="weather-info">
+                        <div class="temperature">28°C</div>
+                        <div class="condition">Partly Cloudy</div>
+                    </div>
+                </div>
+                <div class="last-updated">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Updated: <span id="update-time">Just now</span></span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Reports Main Content -->
+        <main class="reports-content">
+            <header class="reports-header">
+                <h1><i class="fas fa-file-alt"></i> Traffic Analytics Reports</h1>
+                <div class="report-actions">
+                    <button class="btn generate-report">
+                        <i class="fas fa-plus-circle"></i> Generate New Report
+                    </button>
+                    <div class="report-filter">
+                        <select id="report-type">
+                            <option value="all">All Report Types</option>
+                            <option value="daily">Daily Reports</option>
+                            <option value="weekly">Weekly Reports</option>
+                            <option value="monthly">Monthly Reports</option>
+                            <option value="incident">Incident Reports</option>
+                            <option value="custom">Custom Reports</option>
+                        </select>
+                        <div class="date-range-picker">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span id="date-range-display">Last 30 Days</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Report Generation Panel (Hidden by default) -->
+            <div class="report-generation-panel">
+                <div class="panel-header">
+                    <h3>Generate New Report</h3>
+                    <button class="close-panel"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="report-title">Report Title</label>
+                        <input type="text" id="report-title" placeholder="Enter report title">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="report-type-select">Report Type</label>
+                        <select id="report-type-select">
+                            <option value="daily">Daily Traffic Report</option>
+                            <option value="weekly">Weekly Summary</option>
+                            <option value="monthly">Monthly Analysis</option>
+                            <option value="incident">Incident Report</option>
+                            <option value="custom">Custom Report</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Date Range</label>
+                        <div class="date-range-selector">
+                            <input type="date" id="start-date">
+                            <span>to</span>
+                            <input type="date" id="end-date">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Report Sections</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Traffic Volume</label>
+                            <label><input type="checkbox" checked> Congestion Analysis</label>
+                            <label><input type="checkbox" checked> Incident Summary</label>
+                            <label><input type="checkbox"> Vehicle Distribution</label>
+                            <label><input type="checkbox"> Peak Hours</label>
+                            <label><input type="checkbox"> Weather Impact</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="report-format">Format</label>
+                        <select id="report-format">
+                            <option value="pdf">PDF</option>
+                            <option value="html">HTML</option>
+                            <option value="csv">CSV</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn cancel-btn">Cancel</button>
+                        <button class="btn generate-btn">
+                            <i class="fas fa-magic"></i> Generate Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports List -->
+            <div class="reports-list">
+                <div class="report-card featured">
+                    <div class="report-header">
+                        <h3>November 2023 Traffic Analysis</h3>
+                        <div class="report-meta">
+                            <span class="report-type">Monthly Report</span>
+                            <span class="report-date">Generated: 5 Dec 2023</span>
+                        </div>
+                    </div>
+                    <div class="report-preview">
+                        <div class="preview-chart">
+                            <canvas id="featuredChart"></canvas>
+                        </div>
+                        <div class="preview-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">12,450</div>
+                                <div class="stat-label">Total Incidents</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">8.2%</div>
+                                <div class="stat-label">Increase from Oct</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">37 min</div>
+                                <div class="stat-label">Avg. Delay</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="action-btn download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                        <button class="action-btn share-btn">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>Weekly Congestion Report (Nov 27 - Dec 3)</h3>
+                        <div class="report-meta">
+                            <span class="report-type">Weekly Report</span>
+                            <span class="report-date">Generated: 4 Dec 2023</span>
+                        </div>
+                    </div>
+                    <div class="report-preview">
+                        <div class="preview-summary">
+                            <p>The week saw moderate congestion levels with peak traffic on Wednesday due to the Perahera festival. Temple Road experienced 45% higher than average traffic.</p>
+                        </div>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="action-btn download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>Incident Report: Temple Road Accident (Dec 2)</h3>
+                        <div class="report-meta">
+                            <span class="report-type">Incident Report</span>
+                            <span class="report-date">Generated: 3 Dec 2023</span>
+                        </div>
+                    </div>
+                    <div class="report-preview">
+                        <div class="preview-incident">
+                            <div class="incident-severity high">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>High Severity</span>
+                            </div>
+                            <div class="incident-details">
+                                <p><strong>Location:</strong> Temple Road near Dalada Maligawa</p>
+                                <p><strong>Duration:</strong> 2 hours 15 minutes</p>
+                                <p><strong>Impact:</strong> 3.5km traffic backlog</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="action-btn download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>Daily Traffic Snapshot - December 5</h3>
+                        <div class="report-meta">
+                            <span class="report-type">Daily Report</span>
+                            <span class="report-date">Generated: 5 Dec 2023</span>
+                        </div>
+                    </div>
+                    <div class="report-preview">
+                        <div class="preview-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">1,240</div>
+                                <div class="stat-label">Vehicles/hr (Peak)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Reported Incidents</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">32 min</div>
+                                <div class="stat-label">Avg. Travel Time</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="action-btn download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>Festival Season Traffic Analysis 2023</h3>
+                        <div class="report-meta">
+                            <span class="report-type">Custom Report</span>
+                            <span class="report-date">Generated: 30 Nov 2023</span>
+                        </div>
+                    </div>
+                    <div class="report-preview">
+                        <div class="preview-summary">
+                            <p>Comprehensive analysis of traffic patterns during the 2023 Esala Perahera festival period (Aug 10-20), comparing with previous years and recommending improvements.</p>
+                        </div>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="action-btn download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                        <button class="action-btn share-btn">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Pagination -->
+            <div class="reports-pagination">
+                <button class="pagination-btn disabled">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="page-numbers">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>8</span>
+                </div>
+                <button class="pagination-btn">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Report Viewer Modal -->
+    <div class="report-viewer-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-report-title">November 2023 Traffic Analysis</h3>
+                <div class="modal-actions">
+                    <button class="modal-btn print-btn">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                    <button class="modal-btn download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button class="modal-btn close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body" id="modal-report-content">
+                <!-- Report content will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/reports.js"></script>
+</body>
+</html>

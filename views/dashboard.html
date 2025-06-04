@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Kandy Traffic System</title>
+  <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  <script defer src="../assets/js/dashboard.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="admin.php">Back to Admin Menu</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="card">
+        <h2>Total Users</h2>
+        <p id="total-users">Loading...</p>
+      </div>
+      <div class="card">
+        <h2>Active Alerts</h2>
+        <p id="active-alerts">Loading...</p>
+      </div>
+      <div class="card">
+        <h2>Reported Incidents</h2>
+        <p id="reported-incidents">Loading...</p>
+      </div>
+    </section>
+
+    <section class="chart">
+      <h2>Traffic Overview</h2>
+      <canvas id="trafficChart"></canvas>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kandy Traffic Management System</p>
+  </footer>
+</body>
+</html>

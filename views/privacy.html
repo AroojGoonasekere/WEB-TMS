@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Kandy Traffic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/privacy.css">
+</head>
+<body>
+  <div class="privacy-container">
+    <header class="privacy-header">
+      <h1><i class="fas fa-user-shield"></i> Privacy Policy</h1>
+      <p>Last Updated: <span id="last-updated">June 10, 2023</span></p>
+    </header>
+    
+    <div class="privacy-content">
+      <div class="toc-container">
+        <h3>Table of Contents</h3>
+        <ul class="toc-list" id="toc-list">
+          
+        </ul>
+      </div>
+      
+      <div class="policy-sections">
+        <section id="introduction" class="policy-section">
+          <h2>1. Introduction</h2>
+          <p>Welcome to Kandy Traffic's Privacy Policy. This document explains how we collect, use, and protect your personal information when you use our services.</p>
+          <p>By using our website and services, you agree to the collection and use of information in accordance with this policy.</p>
+        </section>
+        
+        <section id="data-collection" class="policy-section">
+          <h2>2. Data We Collect</h2>
+          <p>We may collect the following types of information:</p>
+          <ul>
+            <li><strong>Personal Identification:</strong> Name, email address, phone number (when voluntarily provided)</li>
+            <li><strong>Location Data:</strong> GPS coordinates, approximate location when reporting incidents</li>
+            <li><strong>Usage Data:</strong> Pages visited, time spent, route planning history</li>
+            <li><strong>Device Information:</strong> Browser type, operating system, IP address</li>
+          </ul>
+        </section>
+        
+        <section id="data-use" class="policy-section">
+          <h2>3. How We Use Your Data</h2>
+          <p>Your information helps us:</p>
+          <ul>
+            <li>Provide and maintain our services</li>
+            <li>Improve traffic analysis and route planning</li>
+            <li>Respond to incident reports</li>
+            <li>Communicate important service updates</li>
+            <li>Enhance user experience</li>
+          </ul>
+        </section>
+        
+        <section id="data-sharing" class="policy-section">
+          <h2>4. Data Sharing & Disclosure</h2>
+          <p>We may share information with:</p>
+          <ul>
+            <li><strong>Government Authorities:</strong> For traffic management and urban planning</li>
+            <li><strong>Service Providers:</strong> Third-parties who assist in operating our services</li>
+            <li><strong>Legal Requirements:</strong> When required by law or to protect rights</li>
+          </ul>
+          <p>We never sell your personal data to advertisers or marketers.</p>
+        </section>
+        
+        <section id="data-security" class="policy-section">
+          <h2>5. Data Security</h2>
+          <p>We implement appropriate measures to protect your data:</p>
+          <ul>
+            <li>Encryption of sensitive data</li>
+            <li>Regular security audits</li>
+            <li>Access controls</li>
+            <li>Secure data storage</li>
+          </ul>
+          <p>However, no internet transmission is 100% secure. We cannot guarantee absolute security.</p>
+        </section>
+        
+        <section id="user-rights" class="policy-section">
+          <h2>6. Your Rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access your personal data</li>
+            <li>Request correction of inaccurate data</li>
+            <li>Request deletion of your data</li>
+            <li>Opt-out of data collection (with service limitations)</li>
+            <li>Withdraw consent</li>
+          </ul>
+          <button id="data-request-btn" class="privacy-btn">Submit Data Request</button>
+        </section>
+        
+        <section id="cookies" class="policy-section">
+          <h2>7. Cookies & Tracking</h2>
+          <p>We use cookies to:</p>
+          <ul>
+            <li>Remember user preferences</li>
+            <li>Analyze service usage</li>
+            <li>Improve performance</li>
+          </ul>
+          <div class="cookie-controls">
+            <div class="cookie-option">
+              <label>
+                <input type="checkbox" id="essential-cookies" checked disabled>
+                Essential Cookies
+              </label>
+              <span class="cookie-desc">(Required for basic functionality)</span>
+            </div>
+            <div class="cookie-option">
+              <label>
+                <input type="checkbox" id="analytics-cookies" checked>
+                Analytics Cookies
+              </label>
+              <span class="cookie-desc">(Help us improve our services)</span>
+            </div>
+            <button id="save-cookie-btn" class="privacy-btn">Save Preferences</button>
+          </div>
+        </section>
+        
+        <section id="changes" class="policy-section">
+          <h2>8. Policy Changes</h2>
+          <p>We may update this policy periodically. Significant changes will be notified through our website or email.</p>
+          <p>We recommend reviewing this page occasionally for updates.</p>
+        </section>
+        
+        <section id="contact" class="policy-section">
+          <h2>9. Contact Us</h2>
+          <p>For privacy-related questions or requests:</p>
+          <address>
+            <p><i class="fas fa-envelope"></i> privacy@kandytraffic.lk</p>
+            <p><i class="fas fa-phone"></i> +94 81 234 5678</p>
+            <p><i class="fas fa-map-marker-alt"></i> Data Protection Officer, Kandy Traffic, 123 Peradeniya Rd, Kandy</p>
+          </address>
+        </section>
+      </div>
+    </div>
+    
+    <footer class="privacy-footer">
+      <p>&copy; <span id="current-year">2023</span> Kandy Traffic. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookie Policy</a>
+      </div>
+    </footer>
+  </div>
+
+ 
+  <div id="data-request-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3><i class="fas fa-database"></i> Data Request</h3>
+      <form id="data-request-form">
+        <div class="form-group">
+          <label for="request-type">Request Type</label>
+          <select id="request-type" required>
+            <option value="">Select request type</option>
+            <option value="access">Access my data</option>
+            <option value="correction">Correct my data</option>
+            <option value="deletion">Delete my data</option>
+            <option value="opt-out">Opt-out of data collection</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="user-email">Email Address</label>
+          <input type="email" id="user-email" required placeholder="Your registered email">
+        </div>
+        <div class="form-group">
+          <label for="request-details">Additional Details</label>
+          <textarea id="request-details" placeholder="Provide any additional information"></textarea>
+        </div>
+        <button type="submit" class="privacy-btn">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/privacy.js"></script>
+</body>
+</html>

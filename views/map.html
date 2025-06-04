@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Traffic Map | Kandy Traffic Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/map.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="Logof.jpg" alt="Kandy Traffic Logo">
+        <span>Kandy TrafficMS</span>
+      </div>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+<ul class="nav-links">
+  <li><a href="home.php"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="map.html"><i class="fas fa-map-marked-alt"></i> Live Map</a></li>
+  <li><a href="routes.html" ><i class="fas fa-route"></i> Routes</a></li>
+  <li><a href="analytics.php"><i class="fas fa-chart-line"></i> Analytics</a></li>
+  <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+  <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+</ul>
+
+      <div class="user-actions">
+        <div class="user-dropdown">
+          <button class="user-btn">
+            <i class="fas fa-user-circle"></i>
+            <span id="usernameDisplay">Guest</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login/Signup</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Map Controls -->
+  <!-- [Your map control bar stays unchanged here] -->
+
+  <!-- Main Map Container -->
+  <div class="map-container">
+    <div id="map" style="height: 100vh; width: 100%;"></div>
+
+    <!-- Map Overlay Controls -->
+    <!-- [Zoom + Location buttons] -->
+
+    <!-- Traffic Info Panel -->
+    <!-- [Alerts and Info panel] -->
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="BGIM-5.jpg" alt="Kandy Traffic Logo">
+          <span>Kandy Traffic Management System</span>
+        </div>
+        <div class="footer-links">
+          <div class="links-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="map.html">Live Map</a></li>
+              <li><a href="routes.html">Route Planner</a></li>
+            </ul>
+          </div>
+          <div class="links-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="links-column">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Kandy Traffic Management System. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Load map.js first -->
+  <script src="../assets/js/map.js"></script>
+
+  <!-- Load Google Maps with your working key -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCBuEwhTMXB7tOyezqIJa7JU-vRctvKCM&libraries=visualization&callback=initMap"
+    async
+    defer>
+  </script>
+</body>
+</html>

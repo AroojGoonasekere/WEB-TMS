@@ -8,7 +8,7 @@ This project is developed as part of the Final Year Project for the Higher Natio
 
 ## 🖼️ Website Home Page
 
-![Website Home](images/home.png) <!-- Place your image in an 'images' folder within the repo -->
+![Website Home](home.png) <!-- Place your image in an 'images' folder within the repo -->
 
 ## 📍 Project Overview
 

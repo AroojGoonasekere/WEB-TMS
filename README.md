@@ -58,9 +58,9 @@ The **Optimized Traffic Management and Analytics System** is a comprehensive pla
 
 Agile development methodology was followed, including:
 
-- Sprint-based development
-- Continuous user feedback integration
-- Iterative testing and deployments
+- Sprint-based development  
+- Continuous user feedback integration  
+- Iterative testing and deployments  
 - Collaborative tools like Trello and Microsoft Teams
 
 ## 📂 Project Modules
@@ -88,3 +88,7 @@ The system emphasizes secure data handling and user authentication. Consideratio
 
 - [Trello Board](https://trello.com/b/jDnZvcCw/traffic-optimization-system)
 
+## 🔍 Additional Resources
+
+- Explanatory Data Analysis (EDA) Repository:  
+  🔗 [https://github.com/AroojGoonasekere/EDA.git](https://github.com/AroojGoonasekere/EDA.git)

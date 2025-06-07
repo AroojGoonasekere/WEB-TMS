@@ -88,10 +88,3 @@ The system emphasizes secure data handling and user authentication. Consideratio
 
 - [Trello Board](https://trello.com/b/jDnZvcCw/traffic-optimization-system)
 
-## 📚 References
-
-Several academic and industrial sources were used, including LinkedIn articles, Medium blogs, and official documentation on AI, ML, and RPA in traffic systems. Full references are provided in the project documentation.
-
----
-
-> This project was submitted to the **School of Computing and Engineering, National Institute of Business Management – Kandy** under the guidance of **Mrs. Nilanka Singhabosha**.
